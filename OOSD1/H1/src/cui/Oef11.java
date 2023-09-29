@@ -17,6 +17,7 @@ public class Oef11 {
 		
 		
 		System.out.printf("Het getal bestaat uit:%n%d duizentallen%n%d hondertallen%n%d tientallen %n%d eenheden", duizenttal /1000, hondertal /100, tiental / 10, eenheid);
+		scan.close();
 	}
 
 }
