@@ -13,11 +13,5 @@ public class Oef2_4 {
 		int b = 0;
 		
 		System.out.println(age >= 65? "Age is greater then 65":"Age is less then 65");
-		
-		for (x = 1; x <= 10;x++) {
-			y = x*x;
-			b += y;
-		}
-		System.out.println(b);
 	}
 }
