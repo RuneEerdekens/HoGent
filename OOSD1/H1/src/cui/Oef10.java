@@ -2,7 +2,7 @@ package cui;
 
 import java.util.Scanner;
 
-public class oef10 {
+public class Oef10 {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
