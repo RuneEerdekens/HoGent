@@ -1,3 +1,2 @@
-<ul>
-<li>test</li>
-</ul>
+* man passwd
+* passwd --help
