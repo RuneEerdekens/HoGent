@@ -10,37 +10,11 @@ public class Oef2_1 {
 
 	private void method1() {
 
-		int x = -12;
-		int temp = 10;
+		int x = 10;
+		int temp = 30;
 
-		if (x >= 0) {
-			System.out.print("Positief");
-			if(x%2 == 0) {
-				System.out.println(" en even");
-			}else {
-				System.out.println(" en oneven");
-			}
-		} else {
-			System.out.print("Negatief");
-			if(x%2 == 0) {
-				System.out.println(" en even");
-			}else {
-				System.out.println(" en oneven");
-			}
-		}
-		
-		
-
-		if (temp < 20) {
-			if (temp <= 10) {
-				System.out.println("Koud");
-			} else {
-				System.out.println("Goed");
-			}
-
-		} else {
-			System.out.println("warm");
-		}
+		System.out.println(x % 2 == 0 ? x >= 0 ? "Positief en even" : "Negatief en even" : x >= 0 ? "Positief en oneven" : "Negatief en oneven");
+		System.out.println(temp < 20 ? temp <= 10 ? "koud" : "goed" : "warm");
 	}
 
 }

@@ -4,18 +4,20 @@ public class Oef2_4 {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		Oef2_4 obj = new Oef2_4();
-		obj.method1();
+		new Oef2_4().method1();
 	}
 
 	private void method1() {
 		int age = 70;
-		if (age >= 65) {
-			System.out.println("Age greater than or equal to 65");
-		} else {
-			System.out.println("Age is less than 65 ");
+		int x, y = 1;
+		int b = 0;
+		
+		System.out.println(age >= 65? "Age is greater then 65":"Age is less then 65");
+		
+		for (x = 1; x <= 10;x++) {
+			y = x*x;
+			b += y;
 		}
-
+		System.out.println(b);
 	}
-
 }
