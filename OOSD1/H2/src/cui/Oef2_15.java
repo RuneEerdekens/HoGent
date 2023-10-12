@@ -8,10 +8,8 @@ public class Oef2_15 {
 	}
 	
 	private void method1() {
-		int i;
-		int j;
-		int k;
-		
+		int i, j, k;
+
 		// Patroon A
 		
 		for (i = 1; i <= 10; i++) {
