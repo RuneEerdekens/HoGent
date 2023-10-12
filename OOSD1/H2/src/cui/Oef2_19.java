@@ -23,7 +23,7 @@ public class Oef2_19 {
 		int uur;
 		int min;
 
-		if (distance > 0) {
+		if (distance > 0 && distance%1==0) {
 			for (int i = 0; i <= 10; i++) {
 
 				speed = startSpeed + speedIncrement * i;
