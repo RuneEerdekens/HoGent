@@ -23,8 +23,8 @@ public class Oef4_05 {
 			i++;
 		}
 		
-		System.out.printf("Hoogste omzet van %d Euro werd behaald in %d %s maand%n", highest, highMonth, highMonth==1?"ste":"de");
-		System.out.printf("Laagste omzet van %d Euro werd behaald in %d %s maand%n", lowest, lowMonth, lowMonth==1?"ste":"de");
+		System.out.printf("Hoogste omzet van %d Euro werd behaald in %d %s maand%n", highest, highMonth, highMonth==1||highMonth==8?"ste":"de");
+		System.out.printf("Laagste omzet van %d Euro werd behaald in %d %s maand%n", lowest, lowMonth, lowMonth==1||lowMonth==8?"ste":"de");
 	}
 
 }
