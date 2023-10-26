@@ -10,7 +10,7 @@ public class Lied {
 		setDuurInMinuten(duurPerMinute);
 	}
 
-	public Lied(int duurperMinute) {
+	public Lied(double duurperMinute) {
 		this(duurperMinute, 100);
 	}
 
@@ -60,7 +60,9 @@ public class Lied {
 	}
 
 	public int geefDuurinSeconden() {
-		return (int) duurInMinuten * 60;
+		int seconde = (int) duurInMinuten * 60;
+		seconde += (int) (duurInMinuten%1 * 60);
+		return seconde;
 	}
 
 }
