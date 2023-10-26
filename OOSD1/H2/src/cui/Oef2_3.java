@@ -21,6 +21,7 @@ public class Oef2_3 {
 
 		}
 		System.out.println(k);
+		
 	}
 	
 	private void method2() {

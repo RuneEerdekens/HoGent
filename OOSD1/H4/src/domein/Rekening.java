@@ -10,6 +10,7 @@ public class Rekening {
 		setRekeningNummer(rekeningNummer);
 		setNaamHouder(naamHouder);
 	}
+	
 	public Rekening(long rekeningNummer) {
 		this(rekeningNummer, "onbekend");
 	}
