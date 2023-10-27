@@ -18,9 +18,9 @@ public class Oef4_11 {
 			}
 		}
 		int i = 0;
-		for (int rij = 0; rij < matrix.length; rij++) {
-			for (int kolom = 0; kolom < matrix[rij].length; kolom++) {
-				som += matrix[rij][kolom];
+		for (double[] rij : matrix) {
+			for (double num : rij) {
+				som += num;
 				i++;
 			}
 		}
