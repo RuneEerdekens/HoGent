@@ -60,9 +60,7 @@ public class Lied {
 	}
 
 	public int geefDuurinSeconden() {
-		int seconde = (int) duurInMinuten * 60;
-		seconde += (int) (duurInMinuten%1 * 60);
-		return seconde;
+		return (int) (duurInMinuten * 60);
 	}
 
 }
