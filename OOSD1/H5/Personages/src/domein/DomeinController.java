@@ -10,7 +10,13 @@ public class DomeinController {
 	private CategorieRepository categorieRepo;
 	private PersonageRepository personageRepo;
 	private Categorie selectedCat;
+	private Personage newPersonage;
 
+	
+	private void setNewPersonage(Personage newPersonage) {
+		this.newPersonage = newPersonage;
+	}
+	
 	public DomeinController() {
 		categorieRepo = new CategorieRepository();
 	}
@@ -38,6 +44,16 @@ public class DomeinController {
 	
 	public void selecteerCategorie(String omschrijving) {
 		selectedCat = categorieRepo.geefCategorie(omschrijving);
+	}
+	
+	public void registreerPersonage(String naam) {
+		setNewPersonage(new Personage(naam, selectedCat));
+		personageRepo.voegToe(newPersonage);
+	}
+	
+	public PersonageDTO geefPersonage() {
+		Categorie c = newPersonage.getCategorie();
+		return new PersonageDTO(newPersonage.getNaam(), c.getOmschrijving(), c.getKracht(), c.getSnelheid(), c.getLenigheid());
 	}
 	
 }

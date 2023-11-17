@@ -18,6 +18,18 @@ public class Categorie {
 		return omschrijving;
 	}
 	
+	public int getKracht() {
+		return kracht;
+	}
+
+	public double getSnelheid() {
+		return snelheid;
+	}
+
+	public int getLenigheid() {
+		return lenigheid;
+	}
+
 	private void setOmschrijving(String omschrijving) {
 		if (omschrijving == null || omschrijving.isBlank()|| omschrijving.length() > 100) {
 			this.omschrijving = "anoniem";
