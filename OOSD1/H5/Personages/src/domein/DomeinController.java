@@ -29,7 +29,8 @@ public class DomeinController {
 		List<Personage> personages = personageRepo.getPersonages();
 		List<PersonageDTO> personageDTOs = new ArrayList<>();
 		for (Personage personage : personages) {
-			personageDTOs.add(new PersonageDTO(personage.getNaam(), personage.getCategorie().getOmschrijving()));
+			Categorie c = personage.getCategorie();
+			personageDTOs.add(new PersonageDTO(personage.getNaam(), personage.getCategorie().getOmschrijving(), c.getKracht(),c.getSnelheid(), c.getLenigheid()));
 		}
 		return personageDTOs;
 	}

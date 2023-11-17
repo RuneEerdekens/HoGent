@@ -17,20 +17,26 @@ public class PersonagesApplicatie {
 
 	public void start() {
 		int keuze = geefMenu();
-		while(keuze != 3) {			
+		while(keuze != 4) {			
 			switch (keuze) {
 			case 1 -> maakCategorie();
 			case 2 -> maakPersonage();
+			case 3 -> toonPersonages();
 			}
 			keuze = geefMenu();
 		}
 	}
 	
-	
+	private void toonPersonages(){
+		List<PersonageDTO> personageLijst = dc.geefPersonages();
+		for (PersonageDTO personage : personageLijst) {
+			System.out.println();
+			System.out.printf("naam: %s%nomschijving: %s%nkracht: %d%nsnelheid: %.2f%nlenigheid: %d%n", personage.naam(), personage.omschrijving(), personage.kracht(), personage.snelheid(), personage.lenigheid());
+		}
+	}
 
 	private void maakPersonage() {
 		Scanner scan = new Scanner(System.in);
-		//List<PersonageDTO> personageLijst = dc.geefPersonages();
 		
 		List<CategorieDTO> categorieën = dc.geefCategorieën();
 		for (CategorieDTO categorie : categorieën) {
@@ -68,10 +74,11 @@ public class PersonagesApplicatie {
 		do {
 			System.out.println("1. maak categorie");
 			System.out.println("2. maak nieuw personage");
-			System.out.println("3. stop applicatie");
+			System.out.println("3. toon personages");
+			System.out.println("4. stop applicatie");
 			System.out.print("maak u keuze: ");
 			num = scan.nextInt();
-		} while (num < 1 || num > 3);
+		} while (num < 1 || num > 4);
 		return num;
 
 	}
