@@ -19,6 +19,7 @@ public class DomeinController {
 	
 	public DomeinController() {
 		categorieRepo = new CategorieRepository();
+		personageRepo = new PersonageRepository();
 	}
 
 	public void maakCategorie(String omschrijving, int kracht, double snelheid, int lenigheid) {

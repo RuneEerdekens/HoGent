@@ -17,9 +17,12 @@ public class PersonagesApplicatie {
 
 	public void start() {
 		int keuze = geefMenu();
-		switch (keuze) {
-		case 1 -> maakCategorie();
-		case 2 -> maakPersonage();
+		while(keuze != 3) {			
+			switch (keuze) {
+			case 1 -> maakCategorie();
+			case 2 -> maakPersonage();
+			}
+			keuze = geefMenu();
 		}
 	}
 	
@@ -65,9 +68,10 @@ public class PersonagesApplicatie {
 		do {
 			System.out.println("1. maak categorie");
 			System.out.println("2. maak nieuw personage");
+			System.out.println("3. stop applicatie");
 			System.out.print("maak u keuze: ");
 			num = scan.nextInt();
-		} while (num != 1 && num != 2);
+		} while (num < 1 || num > 3);
 		return num;
 
 	}
