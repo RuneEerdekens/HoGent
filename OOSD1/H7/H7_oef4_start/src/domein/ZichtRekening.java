@@ -25,7 +25,7 @@ public class ZichtRekening extends Rekening
 	
 	@Override
 	public boolean haalAf(double bedrag)
-	{
+	{	
 		if (getSaldo() - bedrag >= maxKredietOnderNul)
 			return super.haalAf(bedrag); 
 		return false;
